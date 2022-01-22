@@ -1,7 +1,7 @@
 const handOptions = {
-  "rock": "assets/Rock.png",
-  "paper": "assets/Paper.png",
-  "scissors": "assets/Scissors.png"
+  "rock": "/assets/Rock.png",
+  "paper": "/assets/Paper.png",
+  "scissors": "/assets/Scissors.png"
 }
 
 let SCORE = 0;
@@ -32,10 +32,11 @@ const pickComputerHand = (hand) => {
 const referee = (userHand, cpHand) => {
   if (userHand == "paper" && cpHand == "scissors") {
     setDecision("YOU LOSE!");
+    setScore(SCORE - 1);
   }
   if (userHand == "paper" && cpHand == "rock") {
     setDecision("YOU WIN!");
-    setScore(SCORE - 1);
+    setScore(SCORE + 3);
   }
   if (userHand == "paper" && cpHand == "paper") {
     setDecision("It's a tie!");
