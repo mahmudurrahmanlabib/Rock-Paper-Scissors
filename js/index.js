@@ -35,7 +35,7 @@ const referee = (userHand, cpHand) => {
   }
   if (userHand == "paper" && cpHand == "rock") {
     setDecision("YOU WIN!");
-    setScore(SCORE - 3);
+    setScore(SCORE - 1);
   }
   if (userHand == "paper" && cpHand == "paper") {
     setDecision("It's a tie!");
@@ -46,7 +46,7 @@ const referee = (userHand, cpHand) => {
   }
   if (userHand == "rock" && cpHand == "paper") {
     setDecision("YOU LOSE!");
-    setScore(SCORE - 3);
+    setScore(SCORE - 1);
   }
   if (userHand == "rock" && cpHand == "rock") {
     setDecision("It's a tie!");
@@ -56,7 +56,7 @@ const referee = (userHand, cpHand) => {
   }
   if (userHand == "scissors" && cpHand == "rock") {
     setDecision("YOU LOSE!");
-    setScore(SCORE - 3);
+    setScore(SCORE - 1);
   }
   if (userHand == "scissors" && cpHand == "paper") {
     setDecision("YOU WIN!");
